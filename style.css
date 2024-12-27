@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --DarkCyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 600px;
+  height: 450px;
+  background-color: var(--White);
+  border-radius: 10px;
+  display: flex;
+
+  gap: 28px;
+}
+
+.desktop-view {
+  float: left;
+  width: 297px;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.main {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  margin-right: 28px;
+  height: auto;
+}
+.mobile-view {
+  display: none;
+}
+
+button {
+  width: 100%;
+  height: 47px;
+  padding: 1rem;
+  color: var(--White);
+  cursor: pointer;
+  background-color: var(--DarkCyan);
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.currency {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.currency small {
+  text-decoration: line-through;
+}
+
+.main p:first-of-type {
+  font-family: Montserrat;
+  font-weight: 500;
+  color: var(--DarkGrayishBlue);
+}
+
+.main h1 {
+  font-family: Fraunces;
+}
+
+.p {
+  font-family: Montserrat;
+}
+
+.currency h1 {
+  color: var(--DarkCyan);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 375px;
+      height: 400px;
+      padding-left: 30px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .desktop-view {
+      display: none;
+    }
+
+    .mobile-view {
+      display: block;
+      margin-top: 10px;
+      width: 375px;
+      height: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .main {
+      padding-bottom: 10px;
+    }
+  }
+}
